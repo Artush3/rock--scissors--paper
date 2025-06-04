@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="game_logo.ico" type="image/png">
+    <title>Камень, Ножницы, Бумага</title>
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-container__title">Камень, Ножницы, Бумага</h1>
+        
+        <div class="game-container__score-board">
+            <div class="game-container__badge game-container__badge--user-label">Вы</div>
+            <div class="game-container__badge game-container__badge--comp-label">Компьютер</div>
+            <span id="user-score">0</span>:<span id="comp-score">0</span>
+        </div>
+        
+        <div class="game-container__result">
+            <p class="game-container__desc">Сделайте свой выбор!</p>
+        </div>
+        
+        <div class="game-container__choices">
+            <button class="game-container__choice" id="rock">
+                <img width="60" height="60" loading="lazy" class="game-container__choice-img" src="./img/stone.png" alt="Камень">
+            </button>
+            <button class="game-container__choice" id="paper">
+                <img width="60" height="60" loading="lazy" class="game-container__choice-img" src="./img/paper.png" alt="Бумага">
+            </button>
+            <button class="game-container__choice" id="scissors">
+                <img width="60" height="60" loading="lazy" class="game-container__choice-img" src="./img/scissors.png" alt="Ножницы">
+            </button>
+        </div>
+        
+        <p class="game-container__action-message" id="action-message">Выберите вариант</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
