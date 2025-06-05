@@ -146,7 +146,7 @@ body {
 .game-container__badge--comp-label {
     position: absolute;
     top: 50%;
-    right: -30px;
+    right: -60px;
     transform: translateY(-50%);
 }
 

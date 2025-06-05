@@ -9,7 +9,7 @@ const actionMessage = document.getElementById("action-message");
 
 // Инициализация счетчиков
 let user_score = 0;
-let comp_score= 0;
+let comp_score = 0;
 
 // Основная функция игры
 function game(userChoice) {
@@ -30,15 +30,17 @@ function getCompChoice() {
 
 // Определение победителя
 function getWinner(user, comp) {
-    if (user === comp) return 'draw';
-    
-    const rules = {
-        rock: 'scissors',
-        paper: 'rock',
-        scissors: 'paper'
-    };
-    
-    return rules[user] === comp ? 'user' : 'comp';
+    if (user === comp) {
+        return 'draw'
+    } else {
+        const rules = {
+            rock: 'scissors',
+            paper: 'rock',
+            scissors: 'paper'
+        };
+        
+        return rules[user] === comp ? 'user' : 'comp';
+    }
 }
 
 // Обновление счета
@@ -82,9 +84,9 @@ function translateChoice(choice) {
 // Подсветка выбранных вариантов
 function showChoices(userChoice, compChoice, winner) {
     // Сначала убираем все подсветки
-    document.getElementById("rock").classList.remove('green-glow', 'red-glow', 'gray-glow');
-    document.getElementById("paper").classList.remove('green-glow', 'red-glow', 'gray-glow');
-    document.getElementById("scissors").classList.remove('green-glow', 'red-glow', 'gray-glow');
+    rockButton.classList.remove('green-glow', 'red-glow', 'gray-glow');
+    paperButton.classList.remove('green-glow', 'red-glow', 'gray-glow');
+    scissorsButton.classList.remove('green-glow', 'red-glow', 'gray-glow');
     
     // Подсвечиваем выбор пользователя
     const userGlow = document.getElementById(userChoice);
